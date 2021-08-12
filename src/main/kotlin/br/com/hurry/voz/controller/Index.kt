@@ -24,8 +24,8 @@ class Index @Autowired constructor(
 
     @GetMapping(path = ["/list"])
     fun list(): ResponseEntity<Iterable<User>>{
-        val users = userRepository.findAll().sortedBy { it.name };
-        return ResponseEntity.ok(users);
+        val users = userRepository.findAll().sortedBy { it.name }
+        return ResponseEntity.ok(users)
     }
 
 
